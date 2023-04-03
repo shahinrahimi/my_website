@@ -1,6 +1,6 @@
 import React from "react"
-import NumericDisplay from "./NumericDisplay"
-import './liveClock.css'
+import Display from "./Display"
+import './clock.css'
 
 const getTwoDigit = (amount) => {
   const twoDigit = amount.toLocaleString(
@@ -13,7 +13,7 @@ const getTwoDigit = (amount) => {
   return [twoDigit[0], twoDigit[1]]
 }
 
-class LiveClock extends React.Component {
+class Clock extends React.Component {
   constructor(props){
     super(props)
     this.state = {
@@ -24,7 +24,7 @@ class LiveClock extends React.Component {
 
   // whenever runs after the component output has been rendered to the DOM.
   componentDidMount(){
-    //console.log('LiveClock mounted.')
+    //console.log('Clock mounted.')
     this.timerID = setInterval(
       () => this.tick(), 1000
     )
@@ -32,7 +32,7 @@ class LiveClock extends React.Component {
 
   // whenever the DOM produced by the Clock is removed.
   componentWillUnmount(){
-    //console.log('LiveClock will mounted.')
+    //console.log('Clock will mounted.')
     clearInterval(this.timerID)
   }
 
@@ -51,20 +51,20 @@ class LiveClock extends React.Component {
       <div className="clock">
         <ul className="clock__screen">
           {/* hours */}
-          <li><NumericDisplay number={hoursDigits[0]}/></li>
-          <li><NumericDisplay number={hoursDigits[1]}/></li>
+          <li><Display number={hoursDigits[0]}/></li>
+          <li><Display number={hoursDigits[1]}/></li>
           <li>:</li>
           {/* mins */}
-          <li><NumericDisplay number={minsDigits[0]}/></li>
-          <li><NumericDisplay number={minsDigits[1]}/></li>
+          <li><Display number={minsDigits[0]}/></li>
+          <li><Display number={minsDigits[1]}/></li>
           <li>:</li>
           {/* secs */}
-          <li><NumericDisplay number={secsDigits[0]}/></li>
-          <li><NumericDisplay number={secsDigits[1]}/></li>
+          <li><Display number={secsDigits[0]}/></li>
+          <li><Display number={secsDigits[1]}/></li>
         </ul>
       </div>
     )
   }
 }
 
-export default LiveClock
+export default Clock

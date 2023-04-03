@@ -1,10 +1,13 @@
 import './App.css'
-import LiveClock from './components/LiveClock/LiveClock'
+import { Clock, Navbar, Home } from './components'
+
 function App() {
   
   return (
     <div className="App">
-      <LiveClock />
+      <Navbar />
+      <Home />
+      <Clock />
     </div>
   )
 }
