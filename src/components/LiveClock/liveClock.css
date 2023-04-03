@@ -1,0 +1,13 @@
+.clock {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  background: #333;
+  color: #E7E9EA;
+  font-size: 2em;
+}
+
+.clock__screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
