@@ -1,3 +1,23 @@
 .home {
-  padding: 2rem;
+  padding: 4rem;
+}
+
+
+.home__icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.home__icon {
+  background-color: #333;
+  padding: 0.5rem 0.7rem;
+  border-radius: 5px;
+  margin-top: 2rem;
+}
+
+.home__icon a {
+  color: #fff;
+  text-decoration: none;
 }
