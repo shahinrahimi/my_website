@@ -1,0 +1,6 @@
+export {default as Services} from "./services/Services"
+export {default as Portfolio} from "./portfolio/Portfolio"
+export {default as Home} from "./home/Home"
+export {default as AboutMe} from "./aboutme/AboutMe"
+export {default as Navbar} from "./navbar/Navbar"
+export {default as Layout} from "./layout/Layout"

@@ -1,12 +1,12 @@
-import Menu from './Menu'
-import Profile from './Profile'
+import { Menu, Avatar } from '../../components'
+
 import './navbar.css'
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="navbar__profile">
-        <Profile />
+      <div className="navbar__avatar">
+        <Avatar />
       </div>
       <div className="navbar__menu">
         <Menu />
