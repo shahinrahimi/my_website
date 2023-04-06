@@ -1,3 +1,4 @@
+export {default as Card} from "./card/Card"
 export {default as Services} from "./services/Services"
 export {default as Portfolio} from "./portfolio/Portfolio"
 export {default as Home} from "./home/Home"
