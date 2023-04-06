@@ -1,13 +1,13 @@
 import './menu.css'
 import { Link } from 'react-router-dom'
-import { useToggle } from '../../hooks/useToggleMenu'
+import { useToggleMenu } from '../../hooks/useToggleMenu'
 
 
 const Menu = () => {
-  const [toggleMenu, setToggleMenu] = useToggle(false)
+  const [toggleMenu, setToggleMenu] = useToggleMenu(false)
 
   const handleToggle = () => {
-    setToggleMenu(!toggle)
+    setToggleMenu(!toggleMenu)
   }
 
 

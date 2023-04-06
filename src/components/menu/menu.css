@@ -147,7 +147,7 @@
   }
   /* ~ {tilde}  */
   .menu__toggle:checked~.menu__list {
-    top: 50px;
+    top: 60px;
     z-index: 0;
   }
   .menu__toggle:checked~.menu__list .menu__item {
