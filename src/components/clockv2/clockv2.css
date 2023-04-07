@@ -1,0 +1,9 @@
+.clockv2 {
+  display: grid;
+  place-content: center;
+}
+
+.clockv2__display {
+  display: flex;
+  flex-direction: row;
+}
