@@ -1,0 +1,1 @@
+export {default as avatarImg} from "./img/avatar.jpg"
