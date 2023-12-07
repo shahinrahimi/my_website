@@ -1,27 +1,32 @@
 import React from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { AdminLayout, Layout } from "./global"
-
-import { Home, Dashboard } from "./pages"
-
+import { Home, Dashboard, LoginPage, RequiredAuth } from "./pages"
+import Providers from "./provider/Providers"
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
+      <Providers>
+        <BrowserRouter>
+          <Routes>
 
-          {/* public */}
-          <Route path="/" element={<Layout/>}>
-            <Route index element={<Home />} />
-          </Route>
+            {/* public */}
+            <Route path="/" element={<Layout/>}>
+              <Route index element={<Home />} />
+            </Route>
 
-          {/* private */}
-          <Route path="/admin" element={<AdminLayout />} >
-            <Route index  element={<Dashboard />} />
-          </Route> 
+            {/* admin */}
+            <Route path="/admin" element={<AdminLayout />} >
+              <Route index  element={<LoginPage />} />
+              {/* private */}
+              <Route path="dash" element={<RequiredAuth />}>
+                <Route index element={<Dashboard />} />
+              </Route>
+            </Route> 
 
-        </Routes>
-      </BrowserRouter>
+          </Routes>
+        </BrowserRouter>
+      </Providers>
     </>
   )
 }
