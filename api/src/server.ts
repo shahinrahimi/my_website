@@ -4,7 +4,7 @@ import express from "express";
 import mongoose from "mongoose"
 import connectDB from "./config/connectDB";
 import userRoutes from "./routes/userRoute"
-
+import scrappingTools from "./lib/scrappingTools";
 dotenv.config()
 const app = express();
 app.use(express.json())
@@ -27,6 +27,7 @@ if (NODE_ENV === "development"){
 app.use("/api/users", userRoutes)
 
 connectDB()
+scrappingTools.scrapMajors()
 console.log(NODE_ENV)
 mongoose.connection.once("open", () => {
     console.log('Connected to MongoDB')
