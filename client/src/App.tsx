@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { AdminLayout, Layout } from "./global"
 import { Home, Dashboard, LoginPage, RequiredAuth } from "./pages"
 import Providers from "./provider/Providers"
+
+import "./App.css"
 function App() {
   return (
     <>
